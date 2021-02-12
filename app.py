@@ -1,4 +1,4 @@
-import cv2
+from cv2 import imread
 import os
 import numpy as np
 from PIL import Image
@@ -17,7 +17,7 @@ model = load_model(model_path)
 
 
 def convert_to_array(img):
-    im = cv2.imread(img)
+    im = imread(img)
     img_ = Image.fromarray(im, 'RGB')
     image = img_.resize((50, 50))
     return np.array(image)
