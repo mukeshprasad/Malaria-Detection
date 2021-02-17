@@ -68,7 +68,8 @@ def upload():
         # Make prediction
         preds = model_predict(file_path, model)
         result = preds
-        print(preds)
+        # print(preds)
+        os.remove(file_path)
         return result
     return None
 
